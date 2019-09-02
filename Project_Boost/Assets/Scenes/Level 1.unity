@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 6730904623636967527, guid: 8492bab259418e84aa3553498e766383,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: -0.268
       objectReference: {fileID: 0}
     - target: {fileID: 6730904623636967527, guid: 8492bab259418e84aa3553498e766383,
         type: 3}
@@ -265,6 +265,21 @@ PrefabInstance:
     - target: {fileID: 6730904623636967527, guid: 8492bab259418e84aa3553498e766383,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237011311647304539, guid: 8492bab259418e84aa3553498e766383,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a445dd13eadf85c4791d22e5e8c05912, type: 3}
+    - target: {fileID: 7237011311647304539, guid: 8492bab259418e84aa3553498e766383,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237011311647304539, guid: 8492bab259418e84aa3553498e766383,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -338,24 +353,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8b83443548b6424997ca139d4355a8e, type: 3}
---- !u!1 &4752077678063185245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6730904623636967528, guid: 8492bab259418e84aa3553498e766383,
-    type: 3}
-  m_PrefabInstance: {fileID: 2061029528115780917}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4752077678063185246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752077678063185245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d3991b52b394d4ea5990f5869f3e7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5309686732547128600
 PrefabInstance:
   m_ObjectHideFlags: 0

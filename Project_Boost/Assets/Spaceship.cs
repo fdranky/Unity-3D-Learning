@@ -4,11 +4,13 @@ using UnityEngine;
 public class Spaceship : MonoBehaviour
 {
     Rigidbody rigidBody;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,15 +24,23 @@ public class Spaceship : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rigidBody.AddRelativeForce(Vector3.up);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            audioSource.Stop();
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            print("Rotate left");
+            transform.Rotate(Vector3.forward);
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.D))
         {
-            print("Rotate right");
+            transform.Rotate(-Vector3.forward);
         }
 
     }
