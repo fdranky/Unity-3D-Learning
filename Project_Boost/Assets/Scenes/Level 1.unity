@@ -1262,6 +1262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 5197302660975331335, guid: 750418a7ca8a7154b90d344eed1c7aae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 5197302660975331355, guid: 750418a7ca8a7154b90d344eed1c7aae,
         type: 3}
       propertyPath: m_LocalPosition.x

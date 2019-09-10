@@ -1,5 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spaceship : MonoBehaviour
 {
@@ -8,6 +8,15 @@ public class Spaceship : MonoBehaviour
 
     Rigidbody rigidBody;
     AudioSource audioSource;
+
+    enum State
+    {
+        Alive,
+        Dying,
+        Transcending
+    }
+
+    State state = State.Alive;
 
     // Start is called before the first frame update
     void Start()
@@ -19,19 +28,43 @@ public class Spaceship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Thrust();
-        Rotate(); 
+        if (state == State.Alive)
+        {
+            Thrust();
+            Rotate();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (state != State.Alive) { return; }
+
         switch (collision.gameObject.tag)
         {
-            case "Friendly": print("OK"); break;
-            case "Enemy":  print("DIE"); break;
-            case "Fuel": print("Fuel"); break;
-            case "Goal": print("WIN"); break;
+            case "Friendly":
+                print("OK");
+                break;
+            case "Goal":
+                state = State.Transcending;
+                print("Hit finish");
+                Invoke("LoadNextScene", 1f);
+                break;
+            default:
+                state = State.Dying;
+                print("Dead");
+                Invoke("LoadFirstScene", 2f);
+                break;
         }
+    }
+
+    private void LoadFirstScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(1);
     }
 
     private void Rotate()
