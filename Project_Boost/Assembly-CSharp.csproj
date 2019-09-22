@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Spaceship.cs" />
+    <Compile Include="Assets\Scripts\Spaceship.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Fran/Documents/UnityProjects/3D/Project_Boost/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
