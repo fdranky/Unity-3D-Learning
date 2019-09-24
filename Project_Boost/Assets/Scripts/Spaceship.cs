@@ -53,6 +53,7 @@ public class Spaceship : MonoBehaviour
                 print("OK");
                 break;
             case "Goal":
+                print("Finish");
                 StartSuccessSequence();
                 break;
             default:
